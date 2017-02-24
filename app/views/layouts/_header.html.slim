@@ -1,0 +1,17 @@
+.navbar.navbar-inverse
+  .container-fluid
+    .navbar-header
+      .navbar-brand: a href="#" WebSiteName
+    ul.nav.navbar-nav
+      li.active: a href="#" Home
+      li: a href="#" Page 1
+      li: a href="#" Page 2
+    ul.nav.navbar-nav.navbar-right
+      - if user_signed_in?
+        li
+          = link_to destroy_user_session_path, method: :delete do
+            span.glyphicon.glyphicon-user Вийти
+      - else
+        li
+          = link_to new_user_session_path do
+            span.glyphicon.glyphicon-log-in Увійти
