@@ -25,6 +25,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise-bootstrap-views'
 gem 'slim'
 gem 'html2slim', '~> 0.2.0'
+gem 'carrierwave', '~> 1.0'
+gem "mini_magick"
 #gem 'mailcatcher', '~> 0.6.1'
 
 # Use jquery as the JavaScript library

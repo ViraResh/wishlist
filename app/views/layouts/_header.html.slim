@@ -1,13 +1,22 @@
 .navbar.navbar-inverse
   .container-fluid
     .navbar-header
-      .navbar-brand: a href="#" WebSiteName
+      .navbar-brand WishList
     ul.nav.navbar-nav
-      li.active: a href="#" Home
-      li: a href="#" Page 1
-      li: a href="#" Page 2
+      li.active: a href="/" Home
+      - if user_signed_in?
+        li
+          = link_to "My account", current_user 
+      li: a href="#" Find people
+      li
+        = link_to wishes_path do
+          All Wishes
     ul.nav.navbar-nav.navbar-right
       - if user_signed_in?
+        li
+         = link_to current_user do
+          span.name Привіт,&nbsp;
+          = current_user.name
         li
           = link_to destroy_user_session_path, method: :delete do
             span.glyphicon.glyphicon-user Вийти

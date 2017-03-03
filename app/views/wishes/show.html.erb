@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <!-- Projects Row -->
+  <div class="row">
+          <div class="col-md-4 portfolio-item">
+              <a href="#">
+                <%= image_tag @wish.img_wish.url, class: 'img-responsive' if @wish.img_wish.present? %>
+              </a>
+              <h3>
+                  <a href="#"><%= @wish.title%></a>
+              </h3>
+          </div>
+  </div>
+  <!-- /.row -->
+</div>
+
+<%= link_to 'Edit', edit_wish_path(@wish) %> |
+<%= link_to 'Back', wishes_path %>
